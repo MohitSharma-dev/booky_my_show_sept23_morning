@@ -15,7 +15,7 @@ public class Booking extends BaseModel {
     private List<ShowSeat> showSeats;
     private int amount;
     // Booking 1 : M Payments
-    @OneToMany
+    @OneToMany(mappedBy = "booking")
     private List<Payment> payments;
     // Booking M : 1 User
     @ManyToOne
@@ -28,3 +28,5 @@ public class Booking extends BaseModel {
 // HW : Please complete all the cardinalities before the next session
 
 // mysqlBookMyShowSept23Morning
+
+// @JoinColumn
